@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Pizzeria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Pizzeria
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -40,13 +45,15 @@ namespace Pizzeria
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
-            if (usuario == "admin" || usuario == "vt01"   && contraseña == "123")
-                {
+            var resultado = _seguridad.Autorizar(usuario, contraseña);
+
+            if (resultado == true)
+            {
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuario y contraseña incorrectos");
+                MessageBox.Show("Usuario o contraseña incorrecta");
             }
         }
     }

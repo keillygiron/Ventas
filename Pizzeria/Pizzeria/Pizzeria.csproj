@@ -112,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.Pizzeria.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,6 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1606060742729.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Pizzeria\BL.Pizzeria.csproj">
+      <Project>{ff3db295-4011-4f3a-97c4-0227e4209a87}</Project>
+      <Name>BL.Pizzeria</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
