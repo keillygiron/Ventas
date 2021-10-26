@@ -29,51 +29,93 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label descripciónLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label tamanoLabel;
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaProductosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.descripciónTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.tamanoTextBox = new System.Windows.Forms.TextBox();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
+            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             descripciónLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             tamanoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listaProductosBindingSource
+            // activoLabel
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.Pizzeria.Producto);
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(44, 215);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
+            // 
+            // descripciónLabel
+            // 
+            descripciónLabel.AutoSize = true;
+            descripciónLabel.Location = new System.Drawing.Point(44, 86);
+            descripciónLabel.Name = "descripciónLabel";
+            descripciónLabel.Size = new System.Drawing.Size(66, 13);
+            descripciónLabel.TabIndex = 3;
+            descripciónLabel.Text = "Descripción:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(44, 48);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 5;
+            idLabel.Text = "Id:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(44, 128);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 7;
+            precioLabel.Text = "Precio:";
+            // 
+            // tamanoLabel
+            // 
+            tamanoLabel.AutoSize = true;
+            tamanoLabel.Location = new System.Drawing.Point(44, 171);
+            tamanoLabel.Name = "tamanoLabel";
+            tamanoLabel.Size = new System.Drawing.Size(49, 13);
+            tamanoLabel.TabIndex = 9;
+            tamanoLabel.Text = "Tamano:";
             // 
             // listaProductosBindingNavigator
             // 
-            this.listaProductosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listaProductosBindingNavigator.AddNewItem = null;
             this.listaProductosBindingNavigator.BindingSource = this.listaProductosBindingSource;
             this.listaProductosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaProductosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.listaProductosBindingNavigator.DeleteItem = null;
             this.listaProductosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -86,7 +128,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.listaProductosBindingNavigatorSaveItem});
+            this.listaProductosBindingNavigatorSaveItem,
+            this.toolStripButtonCancelar});
             this.listaProductosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.listaProductosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listaProductosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -97,6 +140,34 @@
             this.listaProductosBindingNavigator.Size = new System.Drawing.Size(461, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
+            this.listaProductosBindingNavigator.RefreshItems += new System.EventHandler(this.listaProductosBindingNavigator_RefreshItems);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -130,16 +201,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -162,44 +226,17 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // listaProductosBindingNavigatorSaveItem
             // 
             this.listaProductosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaProductosBindingNavigatorSaveItem.Enabled = false;
             this.listaProductosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaProductosBindingNavigatorSaveItem.Image")));
             this.listaProductosBindingNavigatorSaveItem.Name = "listaProductosBindingNavigatorSaveItem";
             this.listaProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listaProductosBindingNavigatorSaveItem.Text = "Guardar datos";
-            // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(44, 215);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
-            activoLabel.TabIndex = 1;
-            activoLabel.Text = "Activo:";
+            this.listaProductosBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaProductosBindingNavigatorSaveItem_Click);
             // 
             // activoCheckBox
             // 
@@ -211,15 +248,6 @@
             this.activoCheckBox.UseVisualStyleBackColor = true;
             this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged);
             // 
-            // descripciónLabel
-            // 
-            descripciónLabel.AutoSize = true;
-            descripciónLabel.Location = new System.Drawing.Point(44, 86);
-            descripciónLabel.Name = "descripciónLabel";
-            descripciónLabel.Size = new System.Drawing.Size(66, 13);
-            descripciónLabel.TabIndex = 3;
-            descripciónLabel.Text = "Descripción:";
-            // 
             // descripciónTextBox
             // 
             this.descripciónTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripción", true));
@@ -228,31 +256,14 @@
             this.descripciónTextBox.Size = new System.Drawing.Size(296, 20);
             this.descripciónTextBox.TabIndex = 4;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(44, 48);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 5;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(116, 45);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(296, 20);
             this.idTextBox.TabIndex = 6;
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(44, 128);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 7;
-            precioLabel.Text = "Precio:";
             // 
             // precioTextBox
             // 
@@ -262,15 +273,6 @@
             this.precioTextBox.Size = new System.Drawing.Size(296, 20);
             this.precioTextBox.TabIndex = 8;
             // 
-            // tamanoLabel
-            // 
-            tamanoLabel.AutoSize = true;
-            tamanoLabel.Location = new System.Drawing.Point(44, 171);
-            tamanoLabel.Name = "tamanoLabel";
-            tamanoLabel.Size = new System.Drawing.Size(49, 13);
-            tamanoLabel.TabIndex = 9;
-            tamanoLabel.Text = "Tamano:";
-            // 
             // tamanoTextBox
             // 
             this.tamanoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Tamano", true));
@@ -278,6 +280,21 @@
             this.tamanoTextBox.Name = "tamanoTextBox";
             this.tamanoTextBox.Size = new System.Drawing.Size(296, 20);
             this.tamanoTextBox.TabIndex = 10;
+            // 
+            // toolStripButtonCancelar
+            // 
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
+            // 
+            // listaProductosBindingSource
+            // 
+            this.listaProductosBindingSource.DataSource = typeof(BL.Pizzeria.Producto);
             // 
             // FormProductos
             // 
@@ -297,10 +314,11 @@
             this.Controls.Add(this.listaProductosBindingNavigator);
             this.Name = "FormProductos";
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.FormProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).EndInit();
             this.listaProductosBindingNavigator.ResumeLayout(false);
             this.listaProductosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +345,6 @@
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.TextBox tamanoTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
     }
 }
