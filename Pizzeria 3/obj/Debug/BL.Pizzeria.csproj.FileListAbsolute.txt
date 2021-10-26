@@ -1,0 +1,10 @@
+C:\Users\josue\Documents\III PAC 2021\1800 - Lenguaje III\Proyecto\Pizzeria\BL.Pizzeria\bin\Debug\BL.Pizzeria.dll
+C:\Users\josue\Documents\III PAC 2021\1800 - Lenguaje III\Proyecto\Pizzeria\BL.Pizzeria\bin\Debug\BL.Pizzeria.pdb
+C:\Users\josue\Documents\III PAC 2021\1800 - Lenguaje III\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.csprojResolveAssemblyReference.cache
+C:\Users\josue\Documents\III PAC 2021\1800 - Lenguaje III\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.dll
+C:\Users\josue\Documents\III PAC 2021\1800 - Lenguaje III\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.pdb
+C:\Users\Dairo Castro\Desktop\L3\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.csprojResolveAssemblyReference.cache
+C:\Users\Dairo Castro\Desktop\L3\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.dll
+C:\Users\Dairo Castro\Desktop\L3\Proyecto\Pizzeria\BL.Pizzeria\obj\Debug\BL.Pizzeria.pdb
+C:\Users\Dairo Castro\Desktop\L3\Proyecto\Pizzeria\BL.Pizzeria\bin\Debug\BL.Pizzeria.dll
+C:\Users\Dairo Castro\Desktop\L3\Proyecto\Pizzeria\BL.Pizzeria\bin\Debug\BL.Pizzeria.pdb
