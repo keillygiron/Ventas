@@ -133,6 +133,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.FacturaBL.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.SeguridadBL.datasource" />

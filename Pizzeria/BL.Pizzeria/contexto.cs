@@ -10,10 +10,11 @@ namespace BL.Pizzeria
 {
     public class contexto : DbContext
     {
-        public contexto() : base("Pizzeria")
+        public contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
+            Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\MiBaseDeDatosL3-6pm.mdf")
         { 
-           
-         }
+                       
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -21,10 +22,10 @@ namespace BL.Pizzeria
             Database.SetInitializer(new DatosdeInicio());
         }
 
+        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Producto> Productos { get; set; }
-        public DbSet<Tipo> Tipos { get; set; }
-       
-
-       
-     }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<FacturaDetalle> FacturaDetalle { get; set; }
+        public object Tipos { get; internal set; }
+    }
 }

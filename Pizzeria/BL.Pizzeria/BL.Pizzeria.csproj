@@ -52,8 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="contexto.cs" />
     <Compile Include="DatosdeInicio.cs" />
+    <Compile Include="Factura.cs" />
+    <Compile Include="FacturaBL.cs" />
+    <Compile Include="Producto.cs" />
     <Compile Include="ProductosBL.cs" />
     <Compile Include="SeguridadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

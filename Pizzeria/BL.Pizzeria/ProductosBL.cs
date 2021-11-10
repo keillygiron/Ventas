@@ -19,7 +19,7 @@ namespace BL.Pizzeria
             _contexto = new contexto();
             ListaProductos = new BindingList<Producto>();
 
-               }
+         }
 
         public BindingList<Producto> ObtenerProductos()
         {
@@ -30,7 +30,7 @@ namespace BL.Pizzeria
         public Resultado GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
-            if (resultado.Existoso == false)
+            if (resultado.Exitoso == false)
             {
                 return resultado;
             }
@@ -67,11 +67,16 @@ namespace BL.Pizzeria
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(producto.Descripcion) == true)
+            if (string.IsNullOrEmpty(producto.Descripción) == true)
             {
-                resultado.Mensaje = "Ingrese una descripcion";
+                resultado.Mensaje = "Ingrese una descripción";
                 resultado.Exitoso = false;
+            }
 
+            if (producto.Precio < 0)
+            {
+                resultado.Mensaje = "El precio debe ser mayor que cero";
+                resultado.Exitoso = false;
             }
 
             if (producto.Existencia < 0)
@@ -81,32 +86,20 @@ namespace BL.Pizzeria
 
             }
 
-            if (producto.Precio < 0)
+            if (string.IsNullOrEmpty(producto.Tamaño) == true)
             {
-                resultado.Mensaje = "El precio debe ser ser mayor que cero";
+                resultado.Mensaje = "Ingrese el tamaño";
                 resultado.Exitoso = false;
-
-             if (producto. TipoId == 0)
-                {
-                    resultado.Mensaje = "Selecccione un Tipo";
-                    resultado.Exitoso = false;
-                }
             }
+
+            if (producto. TipoId == 0)
+            {
+                resultado.Mensaje = "Selecccione un Tipo";
+                resultado.Exitoso = false;
+            }
+            
             return resultado;
         }
-    }
-    public class Producto
-    {
-        public int Id { get; set; }
-        public string Descripción { get; set; }
-        public double Precio { get; set; }
-        public string Tamano { get; set; }
-        public bool Activo { get; set; }
-        public int Existencia { get; internal set; }
-        public int TipoId { get; set; }
-        public Tipo Tipo { get; set;} 
-        public byte [] Foto { get; set;}
-        public string Descripcion { get; internal set; }
     }
 
     public class Resultado

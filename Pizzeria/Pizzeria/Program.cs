@@ -18,6 +18,7 @@ namespace Pizzeria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FormVentas());
             Application.Run(new FormMenu());
         }
 

@@ -41,7 +41,7 @@ namespace Pizzeria
 
         private void listaProductosBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
-
+             
         }
 
         private void FormProductos_Load(object sender, EventArgs e)
@@ -68,6 +68,7 @@ namespace Pizzeria
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Producto guardado");
             }
             else
             {
@@ -102,8 +103,12 @@ namespace Pizzeria
         {
             if (idTextBox.Text != "")
             {
-                var id = Convert.ToInt32(idTextBox.Text);
-                Eliminar(id);
+                var resultado = MessageBox.Show("¿Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Eliminar(id);
+                }
             }
         }
 
@@ -158,6 +163,11 @@ namespace Pizzeria
         }
 
         private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

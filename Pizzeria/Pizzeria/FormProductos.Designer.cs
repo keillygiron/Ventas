@@ -34,8 +34,8 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label tamanoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             System.Windows.Forms.Label tipoIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -118,7 +118,16 @@
             tamanoLabel.Name = "tamanoLabel";
             tamanoLabel.Size = new System.Drawing.Size(49, 13);
             tamanoLabel.TabIndex = 9;
-            tamanoLabel.Text = "Tamano:";
+            tamanoLabel.Text = "Tamaño:";
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(44, 121);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
+            tipoIdLabel.TabIndex = 14;
+            tipoIdLabel.Text = "Tipo:";
             // 
             // listaProductosBindingNavigator
             // 
@@ -289,6 +298,7 @@
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(296, 20);
             this.idTextBox.TabIndex = 6;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // precioTextBox
             // 
@@ -340,20 +350,11 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "jpg, png |*.jpg;*png";
+            this.openFileDialog1.Filter = "jpg, png |*.jpg;*.png";
             // 
             // listaTiposBindingSource
             // 
             this.listaTiposBindingSource.DataSource = typeof(Tipo);
-            // 
-            // tipoIdLabel
-            // 
-            tipoIdLabel.AutoSize = true;
-            tipoIdLabel.Location = new System.Drawing.Point(44, 121);
-            tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
-            tipoIdLabel.TabIndex = 14;
-            tipoIdLabel.Text = "Tipo:";
             // 
             // tipoIdComboBox
             // 
