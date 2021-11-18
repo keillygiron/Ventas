@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace BL.Pizzeria
             _contexto = new contexto();
         }
 
-        /*public BindingList<Factura> ObtenerFacturas()
+        public BindingList<Factura> ObtenerFacturas()
         {
             _contexto.Facturas.Include("FacturaDetalle").Load();
             ListaFacturas = _contexto.Facturas.Local.ToBindingList();
@@ -63,7 +64,7 @@ namespace BL.Pizzeria
         }
     }
 
-    public class Factura
+    /*public class Factura
     {
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
@@ -90,11 +91,11 @@ namespace BL.Pizzeria
         public Producto Producto { get; set; }
         public int Cantidad { get; set; }
         public int Precio { get; set; }
-        public int Total { get; set; }
+        public int Subtotal { get; set; }
 
         public FacturaDetalle()
         {
             Cantidad = 1;
-        }*/
-    }
+        }
+    }*/
 }

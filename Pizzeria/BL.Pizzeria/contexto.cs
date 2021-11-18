@@ -11,7 +11,7 @@ namespace BL.Pizzeria
     public class contexto : DbContext
     {
         public contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
-            Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\MiBaseDeDatosL3-6pm.mdf")
+            Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\MiBaseDeDatosL3_6pm.mdf")
         { 
                        
         }

@@ -66,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,11 +152,17 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Pizzeria.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Factura.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.SeguridadBL.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.TiposBL.datasource" />
+    <None Include="Properties\DataSources\Tipo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

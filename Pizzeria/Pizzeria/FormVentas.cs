@@ -22,10 +22,10 @@ namespace Pizzeria
             InitializeComponent();
 
             _contexto = new contexto();
-            CargarProductos();
+            //CargarProductos();
         }
 
-        private void CargarProductos()
+        /*private void CargarProductos()
         {
             int x = 10;
             int y = 20;
@@ -83,7 +83,6 @@ namespace Pizzeria
         private void button1_Click(object sender, EventArgs e)
         {
             Nuevo();
-            _subtotal += 0;
         }
 
         private void Nuevo()
@@ -92,6 +91,7 @@ namespace Pizzeria
             label7.Text = "0.00";
             label3.Text = "0.00";
             label4.Text = "0.00";
+            _subtotal = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,15 +103,15 @@ namespace Pizzeria
             f.Total = double.Parse(label4.Text);
             f.Fecha = DateTime.Now;
 
-            foreach (var item in listView1.Items)
+            /*foreach (var item in listView1.Items)
             {
                 FacturaDetalle d = new FacturaDetalle();
                 d.ProductoId = 1;
                 d.Precio = 1;
                 d.Subtotal = 0;
 
-                f.Detalle.Add(d);
-            }
+                f.FacturaDetalle.Add(d);
+            }*/
 
             _contexto.Facturas.Add(f);
             _contexto.SaveChanges();
