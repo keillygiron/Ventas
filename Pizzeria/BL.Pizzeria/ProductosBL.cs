@@ -12,6 +12,7 @@ namespace BL.Pizzeria
     {
 
         contexto _contexto;
+
         public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
@@ -25,8 +26,18 @@ namespace BL.Pizzeria
         {
             _contexto.Productos.Load();
             ListaProductos = _contexto.Productos.Local.ToBindingList();
+
             return ListaProductos;
         }
+
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {
+            
+            var resultado = _contexto.Productos.Where(p => p.Descripcion.ToLower().Contains(buscar.ToLower()));
+
+            return new BindingList<Producto>(resultado.ToList());
+        }
+
         public Resultado GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
@@ -45,7 +56,7 @@ namespace BL.Pizzeria
 
         {
             var nuevoProducto = new Producto();
-            ListaProductos.Add(nuevoProducto);
+            _contexto.Productos.Add(nuevoProducto);
         }
 
         public bool EliminarProducto(int id)

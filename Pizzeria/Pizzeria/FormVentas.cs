@@ -103,7 +103,7 @@ namespace Pizzeria
             f.Total = double.Parse(label4.Text);
             f.Fecha = DateTime.Now;
 
-            /*foreach (var item in listView1.Items)
+            foreach (var item in listView1.Items)
             {
                 FacturaDetalle d = new FacturaDetalle();
                 d.ProductoId = 1;
@@ -111,7 +111,7 @@ namespace Pizzeria
                 d.Subtotal = 0;
 
                 f.FacturaDetalle.Add(d);
-            }*/
+            }
 
             _contexto.Facturas.Add(f);
             _contexto.SaveChanges();

@@ -15,17 +15,13 @@ namespace Pizzeria
         public FormMenu()
         {
             InitializeComponent();
+
+            
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             login();
-        }
-
-        private void login()
-        {
-            var formLogin = new FormLogin();
-            formLogin.ShowDialog();
         }
 
         private void reporteDeVentadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,8 +33,15 @@ namespace Pizzeria
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            login();
+        }
+           private void login ()
+        { 
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+              toolStripStatusLabel1.Text = "Usuario: keilly";
+
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,17 +72,7 @@ namespace Pizzeria
             formReporteProductos.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+          private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formClientes = new FormClientes();
             formClientes.MdiParent = this;
@@ -91,6 +84,11 @@ namespace Pizzeria
             var formReporteFacturas = new BL.Pizzeria.FormReporteFacturas();
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

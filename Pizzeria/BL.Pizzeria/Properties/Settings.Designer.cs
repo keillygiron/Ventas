@@ -34,5 +34,16 @@ namespace BL.Pizzeria.Properties {
                 return ((string)(this["MIBASEDEDATOSL3_6PM_4eeeafa6ad3d47b08637f35dc54e3c43ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=pizzeria;Integrated Security=T" +
+            "rue;Encrypt=False;TrustServerCertificate=True")]
+        public string pizzeriaConnectionString {
+            get {
+                return ((string)(this["pizzeriaConnectionString"]));
+            }
+        }
     }
 }

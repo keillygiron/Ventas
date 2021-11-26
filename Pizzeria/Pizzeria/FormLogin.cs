@@ -39,6 +39,11 @@ namespace Pizzeria
 
         private void button1_Click(object sender, EventArgs e)
         {
+            login();
+        }
+         
+        private void login()
+        {
             string usuario;
             string contraseña;
 
@@ -55,6 +60,28 @@ namespace Pizzeria
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
             }
+        }
+
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter && textBox1.Text != "")
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter && textBox1.Text != "" && textBox2.Text !="")
+            {
+                login();
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

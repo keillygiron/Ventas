@@ -62,6 +62,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             activoLabel = new System.Windows.Forms.Label();
             descripciónLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -315,6 +317,7 @@
             this.tamanoTextBox.Name = "tamanoTextBox";
             this.tamanoTextBox.Size = new System.Drawing.Size(296, 20);
             this.tamanoTextBox.TabIndex = 10;
+            this.tamanoTextBox.TextChanged += new System.EventHandler(this.tamanoTextBox_TextChanged);
             // 
             // fotoPictureBox
             // 
@@ -369,11 +372,30 @@
             this.tipoIdComboBox.TabIndex = 15;
             this.tipoIdComboBox.ValueMember = "Id";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(476, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(595, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 283);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(tipoIdLabel);
             this.Controls.Add(this.tipoIdComboBox);
             this.Controls.Add(this.button2);
@@ -432,5 +454,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource listaTiposBindingSource;
         private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

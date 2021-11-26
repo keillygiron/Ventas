@@ -171,5 +171,27 @@ namespace Pizzeria
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+            listaProductosBindingSource.DataSource = null;
+
+            if (string.IsNullOrEmpty(buscar))
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            }
+            else
+            {
+
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            }
+        }
+
+        private void tamanoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
